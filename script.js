@@ -40,18 +40,32 @@ console.log(data);
 
 //Callbacks-  in js are the arguments that are passed to the function and are involked later when specific action or events occur. they are a way to handle asyncronous operations and ensure that code is executed in desired sequence.
 
-function advantageClub(name, callback){
+function hiringCompany(name, callback){
     console.log('Hey, '+name+"!");
     callback();
 } 
 function hired() {
     console.log('You are Hired!')
 }
-advantageClub('Shabnoor', hired);
+hiringCompany('Shabnoor', hired);
 
-//Promises---> they are a built in feature that helps to handle asyncronous operations and manage results. they provide a more elegant and readable way to write async code 
-//A Promise represents a value that may not be available yet or may fail in the future. It has three states: pending, fulfilled, or rejected.
-//.promise // promise.all // promise.allSettle
+/*
+Promises---> they are a built in feature that helps to handle asyncronous operations and manage results. they provide a more elegant and readable way to write async code 
+A Promise represents a value that may not be available yet or may fail in the future. It has three states: pending, fulfilled, or rejected.
+.promise // promise.all // promise.allSettle
+*/
+
+ function wait(ms) {
+  // The promise is resolved after a given number of milliseconds specified in the function argument using the setTimeout function
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+// Log "start" to the console
+console.log("start");
+// Call the wait function with a delay of 2000 milliseconds and use the then method to log "done" to the console after the promise has resolved
+wait(2000).then(() => console.log("done"));
+// Log "end" to the console
+console.log("end");
+
 
 //Closure---> is a fundamental concept in JavaScript that allows a function to access variables from its outer (enclosing) lexical scope even after the outer function has finished executing. In simpler terms, a closure is a function bundled together with its surrounding state (variables).
 
