@@ -114,6 +114,8 @@ lists.addEventListener('click', function(event) {
 Debouncing is a technique used in JavaScript to limit the number of times a function is called during a rapid series of events. It helps in optimizing performance and preventing unnecessary function executions, especially for event-driven functions.
 
 The basic idea behind debouncing is to delay the execution of a function until a certain amount of time has passed since the last invocation of that function. If the function is invoked again within the specified time, the timer is reset, and the countdown starts again. This ensures that the function is only executed once the event has stopped firing for a specific duration.
+
+Debouncing is a technique used in JavaScript to limit the number of times a function is called during a specific time period. It's often used in scenarios where a function is triggered repeatedly, such as with input events like typing or scrolling. Debouncing ensures that the function is executed only after a certain delay of inactivity, improving performance and preventing unnecessary or excessive function calls.
 */ 
 
 function debounce(func, delay) {
@@ -286,4 +288,6 @@ var list = [
   var outputList = customFilter(list, 'reading', 5);
   console.log(outputList);
   
-  
+    
+
+
