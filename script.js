@@ -289,6 +289,3 @@ var list = [
   console.log(outputList);
   
   
-
-
-
