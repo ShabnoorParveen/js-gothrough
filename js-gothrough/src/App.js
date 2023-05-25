@@ -1,7 +1,7 @@
 import './App.css';
 import React, { Component } from 'react'
 // import Counts from './component/Counts'
-import CountsFc from './CountsFc';
+import CountsFc from './component/CountsFc';
 // import Counter from "../src/component/Counter";
 
 //lifecycle example
