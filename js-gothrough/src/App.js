@@ -41,6 +41,7 @@ componentWillUnmount(){
         {/* <button className='btn' onClick={this.increment.bind(this)}>Click me</button> */} 
         {/* .bind is used before ES6 but same can be done with an arrow function*/}
         <button className='btn' onClick={()=>{this.increment()}}>Click me</button>
+        {/* for functional component button */}
       </div>
     )
   }
