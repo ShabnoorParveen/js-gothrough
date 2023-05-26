@@ -11,33 +11,84 @@ In short, npm is for managing packages, while npx is for running command-line to
 
 -Explain closures---------------------------------
 is a fundamental concept in JavaScript that allows a function to access variables from its outer (enclosing) lexical scope even after the outer function has finished executing. In simpler terms, a closure is a function bundled together with its surrounding state (variables).
-function counter() {
-    let count = 0;
-  
-    return function() {
-      count++;
-      console.log(count);
-    };
-  }
-  
-  const increment = counter();
-  increment(); // Output: 1
-  increment(); // Output: 2
-  increment(); // Output: 3
 
 -Output based question
+*/
+function counter() {
+  let cnt = 0;
 
+  return function() {
+    cnt++;
+    console.log(cnt);
+  };
+}
+
+const incrmnt = counter();
+incrmnt(); // Output: 1
+incrmnt(); // Output: 2
+incrmnt(); // Output: 3
+/*
 - Life cycle of React----------------------------
 
+In React, the component lifecycle refers to the sequence of events that occur during the lifespan of a component. It consists of different phases: mounting, updating, and unmounting. Each phase has associated lifecycle methods that can be overridden to perform certain actions at specific points in the component's lifecycle.
+
+Here is an overview of the lifecycle methods in React class components:
+
+->Mounting Phase:
+
+constructor(): Initializes the component, sets initial state, and binds event handlers.
+static getDerivedStateFromProps(): Allows updating the state based on changes in props before the component is rendered.
+render(): Returns the JSX representation of the component's UI structure.
+componentDidMount(): Executes after the component is mounted to the DOM. It is commonly used to perform side effects like data fetching, subscriptions, or DOM manipulations.
+
+->Updating Phase:
+
+static getDerivedStateFromProps(): Similar to the mounting phase, it allows updating the state based on changes in props before re-rendering.
+shouldComponentUpdate(): Determines whether the component should re-render or not, based on changes in props or state. It can be used for performance optimization.
+render(): Re-renders the component with updated props or state.
+componentDidUpdate(): Executes after the component is re-rendered. It is commonly used for side effects like fetching updated data or interacting with the DOM based on changes.
+
+->Unmounting Phase:
+
+componentWillUnmount(): Executes just before the component is removed from the DOM. It is used for cleanup tasks like canceling timers or removing event listeners.
+In addition to these lifecycle methods, there are also error handling methods:
+
+componentDidCatch(): Catches and handles errors within the component's subtree.
+getSnapshotBeforeUpdate(): Captures a value or state from the DOM before it changes.
+It's important to note that with the introduction of React Hooks, functional components can also manage lifecycle-like functionality using the useEffect hook.
+
+-ES6 features in JavaScript---------------------------------------
+Arrow Functions: Provide a more concise syntax for writing function expressions.
+
+Classes: Introduce a class syntax for creating objects, constructor functions, and inheritance.
+
+let and const: Offer block-scoped variables (let) and constants (const) that provide better control over variable scoping and immutability.
+
+Template Literals: Allow embedding expressions within string literals using backticks ( ), enabling multiline strings and string interpolation.
+
+Destructuring Assignment: Enable extracting values from arrays or objects into individual variables, making it easier to work with complex data structures.
+
+Default Parameters: Allow defining default values for function parameters, which are used when the corresponding arguments are not provided.
+
+Rest and Spread Operators: The rest operator (...) allows capturing multiple arguments into an array, while the spread operator (...) expands an array or object into individual elements.
+
+Enhanced Object Literals: Provide shorthand syntax for defining object properties, methods, and computed property names.
+
+Modules: Introduce a standardized module system for JavaScript, allowing code organization and reuse across different files.
+
+Promises: Offer a built-in mechanism for handling asynchronous operations, providing a more structured and readable approach compared to callbacks.
+
+Iterators and Generators: Enable creating iterable objects and defining custom iteration behavior using iterator and generator functions.
+
+Enhanced Array Manipulation: Introduce several new array methods like map(), filter(), reduce(), and find() that provide more concise and expressive ways to work with arrays.
+
+-React 18 features-----------------------------------------------------------
+Concept:	Concurrent React
+Features:	Automatic Batching, Transitions, Suspense on the server
+updation: Strict mode 
+https://www.freecodecamp.org/news/react-18-new-features/
 
 
--ES6 features in JavaScript
--React 18 features
-
-"-DSA object based
--Double shorting- agewise and name wise
--Promise in JavaScript
--Callback in JavaScript
 -Event Loop
 -Javastring
 -Shorting array object

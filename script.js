@@ -55,16 +55,16 @@ A Promise represents a value that may not be available yet or may fail in the fu
 .promise // promise.all // promise.allSettle
 */
 
- function wait(ms) {
-  // The promise is resolved after a given number of milliseconds specified in the function argument using the setTimeout function
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-// Log "start" to the console
-console.log("start");
-// Call the wait function with a delay of 2000 milliseconds and use the then method to log "done" to the console after the promise has resolved
-wait(2000).then(() => console.log("done"));
-// Log "end" to the console
-console.log("end");
+//  function wait(ms) {
+//   // The promise is resolved after a given number of milliseconds specified in the function argument using the setTimeout function
+//   return new Promise(resolve => setTimeout(resolve, ms));
+// }
+// // Log "start" to the console
+// console.log("start");
+// // Call the wait function with a delay of 2000 milliseconds and use the then method to log "done" to the console after the promise has resolved
+// wait(2000).then(() => console.log("done"));
+// // Log "end" to the console
+// console.log("end");
 
 
 //Closure---> is a fundamental concept in JavaScript that allows a function to access variables from its outer (enclosing) lexical scope even after the outer function has finished executing. In simpler terms, a closure is a function bundled together with its surrounding state (variables).
@@ -287,5 +287,21 @@ var list = [
   
   var outputList = customFilter(list, 'reading', 5);
   console.log(outputList);
+
+  /*
+  EVENT LOOP---------
+  The event loop is a mechanism in JavaScript that manages the execution of asynchronous tasks and handles event-driven programming. It ensures that tasks are executed in an orderly manner without blocking the main execution thread. 
+  */
+  console.log("Start............");
+
+  // setTimeout(() => {
+  //   console.log("Async Task 1");
+  // }, 2000);
+  
+  // setTimeout(() => {
+  //   console.log("Async Task 2");
+  // }, 1000);
+  
+  console.log("End");
   
   
