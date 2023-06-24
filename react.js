@@ -88,8 +88,22 @@ Features:	Automatic Batching, Transitions, Suspense on the server
 updation: Strict mode 
 https://www.freecodecamp.org/news/react-18-new-features/
 
+*/
+/*
+-Event Loop-------------------------------------------------------------
+The event loop is a mechanism in JavaScript that manages the execution of asynchronous tasks and handles event-driven programming. It ensures that tasks are executed in an orderly manner without blocking the main execution thread.
+*/
+console.log("Start");
+setTimeout(() => {
+  console.log("async task 1");
+}, 2000);
+setTimeout(() => {
+  console.log("async task 2");
+}, 1000);
+console.log("End");
+/*
 
--Event Loop
+
 -Javastring
 -Shorting array object
 -Sort array of object on the basis of title and id
