@@ -9,25 +9,49 @@
   *Unidirectional Data Flow: React enforces a unidirectional data flow, which means that data flows in a single direction within the component hierarchy. 
 
 -How does Virtual DOM work?
-  Initial Render: When you write React components, they are initially rendered into a virtual representation of the DOM in memory called the virtual DOM.
+  *Initial Render: When you write React components, they are initially rendered into a virtual representation of the DOM in memory called the     virtual DOM.
 
-  Virtual DOM vs. Real DOM: The virtual DOM is a lightweight copy of the real DOM. It is a tree-like structure that mirrors the structure of the actual HTML elements in your application.
+  *Virtual DOM vs. Real DOM: The virtual DOM is a lightweight copy of the real DOM. It is a tree-like structure that mirrors the structure of the actual HTML elements in your application.
 
-  Component Updates: When a component's state or props change, React re-renders that component and creates a new virtual DOM representation of it.
+  *Component Updates: When a component's state or props change, React re-renders that component and creates a new virtual DOM representation of it.
 
-  Diffing: React performs a process called "diffing" by comparing the new virtual DOM with the previous version. It analyzes the differences between the two virtual DOM representations to identify what has changed.
+  *Diffing: React performs a process called "diffing" by comparing the new virtual DOM with the previous version. It analyzes the differences between the two virtual DOM representations to identify what has changed.
 
-  Update Strategy: React determines the most efficient way to update the actual DOM based on the identified changes. Instead of directly manipulating the entire real DOM, React only applies the necessary changes to bring it in sync with the new virtual DOM.
+  *Update Strategy: React determines the most efficient way to update the actual DOM based on the identified changes. Instead of directly manipulating the entire real DOM, React only applies the necessary changes to bring it in sync with the new virtual DOM.
 
-  Minimal Updates: By updating only the necessary parts of the real DOM, React minimizes the performance impact. This approach significantly improves the efficiency of UI updates, especially for complex applications with many components.
+  *Minimal Updates: By updating only the necessary parts of the real DOM, React minimizes the performance impact. This approach significantly improves the efficiency of UI updates, especially for complex applications with many components.
 
-  Reconciliation: After applying the required changes to the real DOM, React triggers the reconciliation process. It updates the component tree, calling the necessary lifecycle methods and re-rendering the affected components.
+  *Reconciliation: After applying the required changes to the real DOM, React triggers the reconciliation process. It updates the component tree,  calling the necessary lifecycle methods and re-rendering the affected components.
 
 -How do you handle invalid url in React? To answer this refer React Router
--What arethe new additions of HTML? Have you ever worked with any HTML APIs
+  *Route Configuration: Define your routes using a router library like React Router. Specify the routes that your application supports, including both valid routes and a catch-all route for handling invalid URLs.
+
+  *NotFound Component: Create a NotFound component that will be rendered when an invalid URL is encountered. This component serves as a fallback UI, displaying an appropriate error message or a custom 404 page.
+
+  *Switch Component: Wrap your route components with a Switch component from React Router. The Switch component ensures that only the first matching route is rendered.
+
+  *Order of Routes: Place the NotFound component as the last route within the Switch component. This ensures that if none of the valid routes match, the NotFound component will be rendered as the fallback.
+
+-What are the new additions of HTML? Have you ever worked with any HTML APIs
+  New form controls, including dates and times, email, number, range, tel, url, search, color, and datalist.
+  Numerous new elements, including video, nav, aside, progress, canvas, section, meter, and time.
+  New APIs with various functionalities such as drag-and-drop support, browser history manipulation, and reading and locking screen orientation state.
+
 -How to share data in between components in React without using any external library?
+  *Pass Data via Props: Pass the data from the common parent component to the child components as props. This involves passing both the data value and a callback function to update the data as props to the child components.
+
+  *Update Data through Callbacks: When the child components need to update the shared data, they can call the provided callback function from the props. This function, defined in the common parent component, can modify the shared data state accordingly.
+
+
 -Difference between State & Prop?
-Difference between arrow function and normal function
+  *State: State is a built-in feature of React components and represents the internal data of a component. It is defined and managed within the component itself. Each component can have its own state, which can be updated and accessed using the setState() method.
+  Props: Props (short for properties) are data passed from a parent component to its child component. Props are immutable and cannot be modified within the child component. They are defined in the parent component and passed down to child components during their instantiation.
+  Mutability:
+  *State: State is mutable and can be updated using the setState() method provided by React. When state changes, the component re-renders to reflect the updated state.
+  Props: Props are read-only and cannot be modified directly within the child component. They are passed down from parent components and remain constant throughout the child component's lifecycle.
+
+-Difference between arrow function and normal function
+
 -Promises
 -Life Cycle of React
 -Class Component
