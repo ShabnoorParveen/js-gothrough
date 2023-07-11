@@ -1,4 +1,44 @@
 /*
+-What is React?
+  React is a JavaScript library used for building user interfaces. It's component-based, which means you can create reusable and independent parts of your application. React uses a virtual DOM to efficiently update only the necessary parts of the webpage, improving performance. It's popular because of its simplicity and large community support.
+
+-Advantages of React over JS?
+  *JSX: React utilizes JSX (JavaScript XML), which is an extension of JavaScript that allows you to write HTML-like code within your JavaScript files.
+  *Component-Based Architecture: React follows a component-based approach, allowing developers to build reusable and modular UI components. '
+  *Virtual DOM: React uses a virtual DOM to efficiently update the user interface. Instead of directly manipulating the actual DOM, React compares the virtual DOM with the real DOM and applies only the necessary changes. 
+  *Unidirectional Data Flow: React enforces a unidirectional data flow, which means that data flows in a single direction within the component hierarchy. 
+
+-How does Virtual DOM work?
+  Initial Render: When you write React components, they are initially rendered into a virtual representation of the DOM in memory called the virtual DOM.
+
+  Virtual DOM vs. Real DOM: The virtual DOM is a lightweight copy of the real DOM. It is a tree-like structure that mirrors the structure of the actual HTML elements in your application.
+
+  Component Updates: When a component's state or props change, React re-renders that component and creates a new virtual DOM representation of it.
+
+  Diffing: React performs a process called "diffing" by comparing the new virtual DOM with the previous version. It analyzes the differences between the two virtual DOM representations to identify what has changed.
+
+  Update Strategy: React determines the most efficient way to update the actual DOM based on the identified changes. Instead of directly manipulating the entire real DOM, React only applies the necessary changes to bring it in sync with the new virtual DOM.
+
+  Minimal Updates: By updating only the necessary parts of the real DOM, React minimizes the performance impact. This approach significantly improves the efficiency of UI updates, especially for complex applications with many components.
+
+  Reconciliation: After applying the required changes to the real DOM, React triggers the reconciliation process. It updates the component tree, calling the necessary lifecycle methods and re-rendering the affected components.
+
+-How do you handle invalid url in React? To answer this refer React Router
+-What arethe new additions of HTML? Have you ever worked with any HTML APIs
+-How to share data in between components in React without using any external library?
+-Difference between State & Prop?
+Difference between arrow function and normal function
+-Promises
+-Life Cycle of React
+-Class Component
+-Amazon website cart was shown, asked to insert a button near cart using React
+-How to store in package.jsm.
+-What is package.jsm
+*/
+
+
+
+/*
 -Npm vs npx--------------------------------
 npm (Node Package Manager): is a tool used to install and manage packages (libraries) for Node.js and JavaScript projects. It helps you handle dependencies, versioning, and running scripts for tasks in your projects.
 It is installed in your system with specific version and everytime there is change we need to install latest version which agains occupies space.
