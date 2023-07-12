@@ -229,22 +229,6 @@ Which tech stack and designing packages used in project?
 -Use effect works
 
 
-"1)CSS- what is a difference between relative and absolute positions
-2)CSS-What are pseudo selectors?
-3)CSS-Whats is Z index?
-4)HTML-What is span and div?
-5)Javascript-How to host a function?
-6)Difference b/w let, var and const?
-7)Java script Code-Create an object-delete last key value pair?
-8)React-Creat an array and show that array in a ordered or unordered list?
-9)React code- create a button and apply on-click event?(basically show an alert message)
-10)What is web storage in HTML5?
-11)CSS-Explain iframe?
-12)CSS-Diff. b/w display none and visibility hidden?
-13)CSS- dIFF b/w transition and transform?
-14)Javascript code-create an object?
-15)Create an array and delete a property from object?
-16)Javascript code- create a div element?"
 
 
 "-Code given, asked to align the box in the centre
